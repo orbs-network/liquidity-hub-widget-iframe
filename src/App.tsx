@@ -1,8 +1,8 @@
 import { Widget, WidgetArgs } from "@orbs-network/liquidity-hub-widget";
-import { useConnectModal } from "@rainbow-me/rainbowkit";
+import { ConnectButton, useConnectModal } from "@rainbow-me/rainbowkit";
 import { useMemo } from "react";
 import { useAccount, useConfig, useNetwork } from "wagmi";
-
+import './reset.css'
 const getConfig = () => {
   const searchParams = new URLSearchParams(document.location.search);
   return {
@@ -20,7 +20,8 @@ export const useProvider = () => {
 };
 
 const config = getConfig();
-
+  console.log(config);
+  
 export function App() {
   const { openConnectModal } = useConnectModal();
   const chainId = useNetwork().chain?.id;
@@ -38,5 +39,15 @@ export function App() {
     };
   }, [openConnectModal, chainId, address, provider]);
 
-  return <Widget {...args} />;
+  
+    if (!args.supportedChain) {
+      return <div>Chain ID is missing</div>;
+    }
+
+     return (
+       <div className="app">
+         <ConnectButton showBalance={true}  />
+         <Widget {...args} />
+       </div>
+     );
 }

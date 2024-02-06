@@ -1354,10 +1354,10 @@
     styled-components "^6.1.3"
     zustand "^4.4.7"
 
-"@orbs-network/liquidity-hub-widget@^0.0.35":
-  version "0.0.35"
-  resolved "https://registry.yarnpkg.com/@orbs-network/liquidity-hub-widget/-/liquidity-hub-widget-0.0.35.tgz#b8bd7044f65f6ff92b9d39490dc493ea8ea766fa"
-  integrity sha512-vgS4BtkU0NdpQ4VTlni3HDxBgc6e7hz34FxfKftneJsxS4P6x9NQLrnRQV8ihn9dtXlJ/Tho3Oz4kbeqozHClw==
+"@orbs-network/liquidity-hub-widget@^0.0.36":
+  version "0.0.36"
+  resolved "https://registry.yarnpkg.com/@orbs-network/liquidity-hub-widget/-/liquidity-hub-widget-0.0.36.tgz#4badfe8c44a383622947d2c17d81f251a5a15079"
+  integrity sha512-RZjUnKLHFN89NUCq2kRffW5iRw82lvZgBvHvc6DayuIScev7j84PXR9Z+ffxLACt4fp4mPBxexj5Vx/DVhX2Cw==
   dependencies:
     "@defi.org/web3-candies" "^4.20.12"
     "@orbs-network/liquidity-hub-lib" "^0.0.84"
